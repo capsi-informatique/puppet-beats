@@ -2,9 +2,9 @@
   "name": "capsi-beats",
   "version": "0.1.0",
   "author": "CAPSI Informatique",
-  "summary": "",
+  "summary": "Manage Elastic Beats",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/capsi-informatique/puppet-beats",
   "dependencies": [
     {
       "name": "puppetlabs-apt",
