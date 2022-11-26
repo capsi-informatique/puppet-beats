@@ -266,7 +266,7 @@ include beats::install::debian::remove_repo
 The following parameters are available in the `beats::install::debian::remove_repo` class:
 
 * [`remove_repository`](#remove_repository)
-* [`name`](#name)
+* [`repository`](#repository)
 
 ##### <a name="remove_repository"></a>`remove_repository`
 
@@ -277,7 +277,7 @@ This allow the installation of the .deb without using a repository
 
 Default value: ``true``
 
-##### <a name="name"></a>`name`
+##### <a name="repository"></a>`repository`
 
 Data type: `String`
 
