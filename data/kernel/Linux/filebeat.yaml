@@ -1,0 +1,41 @@
+---
+beats::config::filebeat::enable_input_log: false
+beats::config::filebeat::enable_input_filestream: false
+beats::config::filebeat::paths_input_log: ['/var/log/*.log']
+beats::config::filebeat::paths_input_filestream: ['/var/log/*.log']
+
+beats::modules::filebeat::apache::enable: false
+beats::modules::filebeat::apache::enable_access: true
+beats::modules::filebeat::apache::enable_error: true
+
+beats::modules::filebeat::auditd::enable: false
+
+beats::modules::filebeat::elasticsearch::enable: false
+beats::modules::filebeat::elasticsearch::enable_server: true
+beats::modules::filebeat::elasticsearch::enable_gc: true
+beats::modules::filebeat::elasticsearch::enable_audit: true
+beats::modules::filebeat::elasticsearch::enable_slowlog: true
+beats::modules::filebeat::elasticsearch::enable_deprecation: true
+
+beats::modules::filebeat::haproxy::enable: false
+
+beats::modules::filebeat::iptables::enable: false
+
+beats::modules::filebeat::kibana::enable: false
+beats::modules::filebeat::kibana::enable_log: true
+beats::modules::filebeat::kibana::enable_audit: true
+
+beats::modules::filebeat::mysql::enable: false
+beats::modules::filebeat::mysql::enable_error: true
+beats::modules::filebeat::mysql::enable_slowlog: true
+
+beats::modules::filebeat::nginx::enable: false
+beats::modules::filebeat::nginx::enable_access: true
+beats::modules::filebeat::nginx::enable_error: true
+beats::modules::filebeat::nginx::enable_ingress_controller: false
+
+beats::modules::filebeat::postgresql::enable: false
+
+beats::modules::filebeat::system::enable: false
+beats::modules::filebeat::system::enable_syslog: true
+beats::modules::filebeat::system::enable_auth: true

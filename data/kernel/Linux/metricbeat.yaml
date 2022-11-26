@@ -1,0 +1,49 @@
+---
+beats::modules::metricbeat::apache::enable: false
+beats::modules::metricbeat::apache::hosts: ['http://127.0.0.1']
+
+beats::modules::metricbeat::beat::enable: false
+beats::modules::metricbeat::beat::hosts: ['http://localhost:5066']
+
+beats::modules::metricbeat::docker::enable: false
+beats::modules::metricbeat::docker::hosts: ['unix:///var/run/docker.sock']
+
+beats::modules::metricbeat::elasticsearch::enable: false
+beats::modules::metricbeat::elasticsearch::hosts: ['http://localhost:9200']
+
+beats::modules::metricbeat::kibana::enable: false
+beats::modules::metricbeat::kibana::hosts: ['localhost:5601']
+
+beats::modules::metricbeat::linux::enable: false
+beats::modules::metricbeat::linux::metrics:
+  - 'pageinfo'
+  - 'memory'
+# - 'ksm'
+# - 'conntrack'
+# - 'iostat'
+
+beats::modules::metricbeat::mongodb::enable: false
+beats::modules::metricbeat::mongodb::hosts: ['localhost:27017']
+
+beats::modules::metricbeat::mysql::enable: false
+beats::modules::metricbeat::mysql::hosts: ['root:secret@tcp(127.0.0.1:3306)/']
+
+beats::modules::metricbeat::nginx::enable: false
+beats::modules::metricbeat::nginx::hosts: ['http://127.0.0.1']
+beats::modules::metricbeat::nginx::status_path: 'nginx_status'
+
+beats::modules::metricbeat::system::enable: false
+beats::modules::metricbeat::system::metrics_base:
+  - 'cpu'
+  - 'load'
+  - 'memory'
+  - 'network'
+  - 'process'
+  - 'process_summary'
+  - 'socket_summary'
+# - 'entropy'
+# - 'core'
+# - 'diskio'
+# - 'socket'
+# - 'service'
+# - 'users'
